@@ -70,7 +70,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
         g.setColor(Color.GREEN);
         g.fillRect(playerX, playerY, PLAYER_WIDTH, PLAYER_HEIGHT);
 
-        // O'qni chizish
+
         g.setColor(Color.RED);
         for (Rectangle bullet : bullets) {
             g.fillRect(bullet.x, bullet.y, BULLET_WIDTH, BULLET_HEIGHT);
