@@ -76,13 +76,13 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
             g.fillRect(bullet.x, bullet.y, BULLET_WIDTH, BULLET_HEIGHT);
         }
 
-        // Invaderlarni chizish
+
         g.setColor(Color.CYAN);
         for (Rectangle invader : invaders) {
             g.fillRect(invader.x, invader.y, INVADER_WIDTH, INVADER_HEIGHT);
         }
 
-        // Skorni chizish
+
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.PLAIN, 20));
         g.drawString("Score: " + score, 10, 20);
@@ -92,10 +92,10 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
     public void actionPerformed(ActionEvent e) {
         if (gameOver) return;
 
-        // O'yinchi harakati
+
         playerX += playerVelocity;
 
-        // O'yinchi chekkaga yetib bormasin
+
         if (playerX < 0) {
             playerX = 0;
         }
@@ -103,7 +103,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
             playerX = WIDTH - PLAYER_WIDTH;
         }
 
-        // O'qni harakatlantirish
+
         List<Rectangle> newBullets = new ArrayList<>();
         for (Rectangle bullet : bullets) {
             bullet.y -= 10;
