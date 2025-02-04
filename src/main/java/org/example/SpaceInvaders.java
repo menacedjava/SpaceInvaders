@@ -56,7 +56,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // O'yin tugagan bo'lsa
+
         if (gameOver) {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", Font.BOLD, 50));
@@ -66,7 +66,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
             return;
         }
 
-        // O'yinchi kemasini chizish
+
         g.setColor(Color.GREEN);
         g.fillRect(playerX, playerY, PLAYER_WIDTH, PLAYER_HEIGHT);
 
