@@ -113,7 +113,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
         }
         bullets = newBullets;
 
-        // Invaderlarni harakatlantirish
+
         List<Rectangle> newInvaders = new ArrayList<>();
         for (Rectangle invader : invaders) {
             invader.y += 1;  // Invaderlar pastga tushadi
@@ -123,7 +123,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
         }
         invaders = newInvaders;
 
-        // O'q va invaderlar urilishi
+
         List<Rectangle> toRemove = new ArrayList<>();
         for (Rectangle invader : invaders) {
             for (Rectangle bullet : bullets) {
@@ -138,7 +138,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
         invaders.removeAll(toRemove);
         bullets.removeAll(toRemove);
 
-        // Agar invaderlar ekran pastiga yetib borsa, o'yin tugaydi
+
         for (Rectangle invader : invaders) {
             if (invader.y + INVADER_HEIGHT >= HEIGHT) {
                 gameOver = true;
@@ -153,16 +153,16 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
         int key = e.getKeyCode();
         if (key == KeyEvent.VK_SPACE) {
             if (gameOver) {
-                resetGame(); // O'yinni qayta boshlash
+                resetGame();
             } else {
-                shootBullet(); // O'qni otish
+                shootBullet();
             }
         }
         if (key == KeyEvent.VK_LEFT) {
-            playerVelocity = -5; // Chapga harakatlanish
+            playerVelocity = -5;
         }
         if (key == KeyEvent.VK_RIGHT) {
-            playerVelocity = 5; // O'ngga harakatlanish
+            playerVelocity = 5;
         }
     }
 
@@ -170,7 +170,7 @@ public class SpaceInvaders extends JPanel implements ActionListener, KeyListener
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
         if (key == KeyEvent.VK_LEFT || key == KeyEvent.VK_RIGHT) {
-            playerVelocity = 0;  // Harakatni to'xtatish
+            playerVelocity = 0;
         }
     }
 
